@@ -1,0 +1,119 @@
+body{
+    background-image: url('../images/bg1.jpg');
+    background-repeat: no-repeat;
+}
+.chat_bot{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 20000;
+    border-radius: 50%;
+}
+.chat_bot .fa-plus{
+    display:block;
+    padding:13px 15px;
+    height: 50px;
+    cursor: pointer;
+    width: 50px;
+    font-size:26px;
+    transition:0.2s;
+}
+.btn-info{
+    background: #0096FF;
+    color:white;
+}
+
+.chat_box{
+    border-radius:20px;
+/*    border:1px solid #ccc;*/
+    overflow:hidden;
+    position:fixed;
+    background:white;
+    right:80px;
+    bottom: 90px;
+    width:320px;
+    display:none;
+}
+.box-header{
+    color: white;
+    padding:18px 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#0096FF;
+}
+.box-title{
+    margin:0px;
+}
+.chat-messages {
+    padding:10px;
+    height:280px;
+    background-image: url('../images/doodles.png');
+    background-repeat: repeat;
+    overflow:auto;
+}
+.chat-msg{
+    padding-right:20%; 
+     margin-bottom:10px; 
+}
+.chat-msg.chat-right{
+    padding-left:20%;
+    padding-right:0px;
+}
+
+.chat-msg.chat-right .message{
+    background:#0096FF;
+    border-color:#0096FF;
+    color:white;
+}
+
+.box-footer {
+    border-top:2px solid #BDBDBD;
+    padding: 10px;
+    background-color:#fff;
+color: black;
+}
+
+.box .col-xs-12{
+    min-height:0px;
+}
+
+.chat-msg .message{
+    padding:8px 15px;
+    border-radius:20px;
+    background:#B7B7B7;
+    border:1px solid #B7B7B7;
+    color: white;
+    line-height:18px;
+    display: inline-block;
+    word-wrap: break-word;
+}
+.chat-right{
+    text-align: right;
+}
+.btn:focus,.form-control,.form-control:focus{
+    outline: none;
+    border:none;
+    box-shadow: none;
+}
+.box-footer .btn{
+    background:white;
+    font-size: 16px;
+    border: none;
+}
+.chat_bot.open .fa-plus{
+    transform:rotateZ(135deg);
+    transition:0.2s; 
+}
+.chat_bot.open .chat_box{
+    display: block;
+}
+.btn-user,.btn-user:hover{
+    border:1px solid #0195FF;
+    color: #0195FF;
+    background-color: white;
+    border-radius: 20px;
+    padding: 6px 15px;
+    text-decoration: none;
+}
+.mb10{
+    margin:15px 0px;
+}
