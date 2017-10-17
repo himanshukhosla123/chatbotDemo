@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/css/main2.css">
+<link rel="manifest" href="/manifest.json">
+</head>
+<body onresize="manageResize();">
+ <div class="col-xs-12 col-sm-10 col-md-8 box-container">
+     <div class="box">
+         <h1 class="header big">Practice.ai Assignment</h1>
+          <div class="main-box">
+              <div class="row tasks_row">
+                
+              </div>
+          </div>
+          <button class="ready-btn btn btn-lg text-center">Ready To Rock !</button>
+     </div>
+ </div>
+ 
+ <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="admin-btn">Admin panel</button>
+ <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-window" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+      
+      <h4 class="text-center">Admin panel</h4>
+     <hr>
+     <form action="" method="post" onsubmit="return false">
+     <div class="form-group row">
+         <div class="col-xs-3">
+             User ID
+         </div>
+         <div class="col-xs-9">
+             <input type="text" disabled value="1234">
+         </div>
+         </div> 
+        <div class="form-group row">
+         <div class="col-xs-3">
+             Json
+         </div>
+         <div class="col-xs-9">
+             <textarea name="" id="json" class="" placeholder="Json" cols="80" rows="12">"notification":{ 
+                &nbsp; &nbsp;    "title": "Portugal vs. Denmark", 
+                   &nbsp; &nbsp;"body": "5 to 1", 
+                  &nbsp; &nbsp;"icon": "assets/images/icon_96.png", 
+                 &nbsp; &nbsp; "click_action":window.origin+'/task2.html' 
+                   }  </textarea>
+         </div>
+         </div>
+         
+        <div class="form-group row">
+         <div class="col-xs-3">
+             Sample Json
+         </div>
+         <div class="col-xs-9">
+             <p>
+                 {"id":"rectId",<br>
+                  &nbsp; "message":{"attachment":{ <br>
+                &nbsp; &nbsp;    "payload":{ "elements:[{<br>
+                   &nbsp; &nbsp;"title": "title", <br>
+                  &nbsp; &nbsp;"subtite": "subtitle", <br>
+                 &nbsp; &nbsp; "image_url":window.origin+'/task2.html' <br>
+                  &nbsp; &nbsp; "buttons":[]  }] <br>
+                   } } } }  <br>
+             </p>
+         </div>
+         </div>
+        <div class="text-center">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <input type="submit" value="Push" class="btn btn-primary" data-dismiss="modal" onclick="sendDemoNotification();">
+        </div>
+     </form>  
+    </div>
+      
+      </div>
+    </div>
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>        
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+      <script src="assets/js/template_sample.json"></script> 
+    <script src="assets/js/main2.js"></script>   
+</body>
+</html>

@@ -1,0 +1,95 @@
+body{
+    background:white;
+    font-size:13px;
+}
+.box-container{
+    padding: 0px;
+    float: none;
+    margin: auto;
+}
+.box{
+    overflow: hidden;
+    border-radius:10px;
+    box-shadow:0px 9px 19px 4px #ccc;
+    border: 1px solid #ccc;
+    transition:0.5s;
+    transition-timing-function: linear;
+}
+
+.header{
+    background-color: #F45A24;
+    color:white;
+    padding:15px 10px;
+    margin:0px;
+    text-align: left;
+    transition: 0.3s;
+    border-bottom:none;
+}
+.header.big{
+    text-align: center;
+    padding:100px 40px;
+    border-bottom:20px solid #C83B0B;
+
+}
+.main-box{
+    background-image: url('../images/doodles.png');
+    height:250px;
+    overflow: auto;
+}
+.ready-btn,.ready-btn:focus,.ready-btn:active,.ready-btn:hover{
+    background:#7E93B0 ;
+    color:white;
+    width:100%;
+    padding: 15px 0px;
+}
+@media(max-width:768px){
+    .box{
+        border-radius: 0px;
+    }
+}
+
+
+.btn-user,.btn-user:hover{
+    border:1px solid #ccc;
+    color: #0195FF;
+    background-color: white;
+    padding:5px 10px;
+    width: 100%;
+    font-weight: bold;
+    text-decoration: none;
+}
+p{margin-bottom: 0px;}
+.info .title{
+    font-size:13px;
+    font-weight: bold;
+    height: 36px;
+    overflow: hidden;
+}
+.info .desc{
+    color: grey;
+    font-size: 12px;
+    height:34px;
+    overflow: hidden;
+}
+.tasks_row{
+/*    display:flex;*/
+    display:none;
+    margin:50px 5px 0px;
+}
+.thumbnail{
+    margin: 0px 5px;
+}
+#admin-btn{
+    display: none;
+}
+.thumbnail img{
+    height: 151px;
+    width: 100%;
+}
+.tasks_row .col-xs-4{
+    padding: 0px;
+    flex:1;
+    width:33%;
+    min-width:280px;
+    
+}

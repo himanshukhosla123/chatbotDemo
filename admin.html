@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+    .form-group{
+        margin-bottom:20px;
+    }    
+</style>
+</head>
+<body>
+ <div class="container">
+     <h1 class="text-center">Admin panel</h1>
+     <hr>
+     <form action="" method="post" onsubmit="return PushNotif();">
+     <div class="form-group row">
+         <div class="col-xs-3">
+             User ID
+         </div>
+         <div class="col-xs-9">
+             <input type="text" disabled value="1234">
+         </div>
+         </div> 
+        <div class="form-group row">
+         <div class="col-xs-3">
+             Json
+         </div>
+         <div class="col-xs-9">
+             <textarea name="" id="" class="" placeholder="Json" cols="80" rows="12">"notification":{ 
+                &nbsp; &nbsp;    "title": "Portugal vs. Denmark", 
+                   &nbsp; &nbsp;"body": "5 to 1", 
+                  &nbsp; &nbsp;"icon": "assets/images/icon_96.png", 
+                 &nbsp; &nbsp; "click_action":window.origin+'/task2.html' 
+                   }  </textarea>
+         </div>
+         </div>
+         
+        <div class="form-group row">
+         <div class="col-xs-3">
+             Sample Json
+         </div>
+         <div class="col-xs-9">
+             <p>
+                 "notification":{ <br>
+                &nbsp; &nbsp;    "title": "Portugal vs. Denmark", <br>
+                   &nbsp; &nbsp;"body": "5 to 1", <br>
+                  &nbsp; &nbsp;"icon": "assets/images/icon_96.png", <br>
+                 &nbsp; &nbsp; "click_action":window.origin+'/task2.html' <br>
+                   }  <br>
+             </p>
+         </div>
+         </div>
+        <div class="text-center">
+        <input type="submit" value="Push" class="btn btn-primary btn-lg">
+        </div>
+     </form>  
+    </div>
+   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>        
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<script>
+    function PushNotif(){
+        $.ajax({  
+    type:'POST',
+    url:'https://fcm.googleapis.com/fcm/send',
+    headers:{
+ Authorization:'key=AAAAo8NKsno:APA91bFdpPlxpczFL-XiuJuFoJWkoNJZn9pFrPhR1QhpPOogSxERP5Ep2WwsSYwg8KYKW3Z60SOpg3sq4T7LryXUcNiy7EaZYBOxZDpgJWGWUQco0qxatNHYS_NncLauu5Qy8-cIrsDl',
+            },
+    contentType:'application/json',
+    data:JSON.stringify({
+   "notification":{
+     "title": "Portugal vs. Denmark",
+     "body": "5 to 1",
+     "icon": "assets/images/icon_96.png",
+     "click_action":window.origin+'/task2.html'
+   },
+   "to":token
+ }), success:function(data){
+         console.log(data);
+        },
+        error:function(err,_,xhr){
+            console.log(xhr);
+        }
+    });
+        return false;
+    }
+</script>   
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name":"praktice task2",
+  "short_name":"Task 2",
+  "start_url": "./task2.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "description": "A simply notification app.",
+  "background_color": "white",
+   "icons": [
+    {
+      "src": "assets/images/icon_96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icon_144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icon_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+"gcm_sender_id": "103953800507"    
+}
